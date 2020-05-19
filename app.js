@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 
-const port = 3009
+const port = 3006
 mongoose.connect('mongodb://localhost:27017/backendshop',
  {useNewUrlParser: true, 
     useUnifiedTopology: true,
