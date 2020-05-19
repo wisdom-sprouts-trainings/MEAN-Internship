@@ -40,13 +40,6 @@ router.delete(
   deleteProduct
 );
 
-// //update route
-// router.put(
-//   "/product/:productId",
-//   updateProduct
-// );
 
-
-// router.get("/products/categories", getAllUniqueCategories);
 
 module.exports = router;
