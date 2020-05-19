@@ -21,7 +21,7 @@ app.use(cors());
 
 
 const categoryRoutes = require("./routes/category");
-const authRoutes = require("./routes/   ");
+const authRoutes = require("./routes/auth");
 
 
 app.use("/api", categoryRoutes);

@@ -4,7 +4,7 @@ const router = express.Router();
 
 const {getCategoryById,createCategory,getCategory,getAllCategory,
 updateCategory,
-  removeCategory} = require("../controller/ ");
+  removeCategory} = require("../controller/category");
 
 router.param("categoryId", getCategoryById);
 
