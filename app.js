@@ -19,13 +19,14 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(cors());
 
-
+const productRoutes = require("./routes/product");
 const categoryRoutes = require("./routes/category");
 const authRoutes = require("./routes/auth");
 
 
 app.use("/api", categoryRoutes);
 app.use("/api", authRoutes);
+app.use("/api", productRoutes);
 
 
 
