@@ -28,9 +28,8 @@ const orderRoutes = require("./routes/order");
 app.use("/api", categoryRoutes);
 app.use("/api", authRoutes);
 app.use("/api", productRoutes);
-app.use("/api", orderRoutes);
-
-
+app.use("/api/order", orderRoutes);
+app.use('/uploads', express.static('uploads'));
 
 
 

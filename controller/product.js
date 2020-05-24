@@ -2,13 +2,28 @@ const Product = require("../models/product");
 const formidable = require("formidable");
 const _ = require("lodash");
 const fs = require("fs");
+var multer  = require('multer');
 
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads')
+  },
+  filename: function (req, file, cb) {
+    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+    cb(null, file.fieldname + '-' + uniqueSuffix)
+  }
+})
+
+var upload = multer({ storage: storage })
 
 exports.createProduct = 
 (req, res) =>
  {
+  
  
   const product = new Product(req.body);
+
+  product.productImagePath = req.file.path;
  
   product.save((err, category) => 
   {
